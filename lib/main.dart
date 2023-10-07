@@ -41,22 +41,20 @@ class MainApp extends StatelessWidget {
           backgroundColor: orange,
         ),
 
-         
-
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
-          child:Container(
+          child: Container(
               
-              child:Column(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children:[
+                children: [
                 Container(
                   padding: EdgeInsets.only(top: 50),
                   child:Container(
                     alignment: Alignment.bottomLeft,
                   //height: 100.0,
 
-                    child:Text(
+                    child: Text(
                       'Szukaj...',
                        style: TextStyle(
                         fontSize: 30.0,
