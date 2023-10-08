@@ -92,7 +92,7 @@ class MenuUser extends StatelessWidget {
                 children: [
                   Container( // text field
                     height: 60,
-                    width: 400,
+                    width: 310,
                     
                     child: TextField(
                       decoration: InputDecoration(

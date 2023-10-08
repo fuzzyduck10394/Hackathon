@@ -10,7 +10,7 @@ class User {
 
 Widget generateInterest(String conn, Color color) {
   return Container(
-    padding: EdgeInsets.fromLTRB(25,13,25,13),
+    padding: EdgeInsets.fromLTRB(20,10,20,10),
     margin: EdgeInsets.only(left: 4),
 
     decoration: BoxDecoration(
@@ -18,7 +18,7 @@ Widget generateInterest(String conn, Color color) {
       borderRadius: BorderRadius.circular(40),
       border: Border.all(color: Colors.grey, width: 0.9)
     ),
-    child: Text(conn, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+    child: Text(conn, style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),),
   );
 }
 
@@ -33,7 +33,7 @@ Widget renderInfo(String category, String value) {
         Text(
           category,
           style: TextStyle(
-            fontSize: 13,
+            fontSize: 12,
             color: Colors.grey,
           ),
         ),
@@ -44,7 +44,7 @@ Widget renderInfo(String category, String value) {
             Text(
               value,
               style: TextStyle(
-                fontSize: 20
+                fontSize: 17
               ),
             ),
 
@@ -73,9 +73,7 @@ class _UserProfileState extends State<UserProfile> {
       appBar: AppBar(
 
           centerTitle: true,
-          leading: BackButton(
-            color: Colors.white,
-          ),
+          automaticallyImplyLeading: false,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(
               bottom: Radius.circular(10),
@@ -95,9 +93,13 @@ class _UserProfileState extends State<UserProfile> {
               SizedBox(width: 10),
               TextButton(
                 onPressed: () => Navigator.popAndPushNamed(context, '/choice'),
-                child: Text(
-                  'Płock Sercem',
-                  style: TextStyle(color: Colors.white, fontSize:21)
+                child: Row(
+                  children: [
+                    Text(
+                      'Płock Sercem',
+                      style: TextStyle(color: Colors.white, fontSize:21)
+                    )
+                  ],
                 ),
               ),
             ],
@@ -117,7 +119,7 @@ class _UserProfileState extends State<UserProfile> {
                  // SizedBox(height: 2,),
                   Column(
                     children: [
-                      SizedBox(height: 20,),
+                      SizedBox(height: 10,),
                       Container(
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
@@ -142,20 +144,20 @@ class _UserProfileState extends State<UserProfile> {
                                   ), 
                         
                                   Padding(
-                  padding: const EdgeInsets.fromLTRB(10,20,10,40),
+                  padding: const EdgeInsets.fromLTRB(10,14,10,15),
                   child: Column(
                     children: [
                       Text(
                         "Adam Kowalski",
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 19,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
                         "Wolontariusz",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 14,
                         ),
                       ),
                     ],
@@ -196,15 +198,15 @@ class _UserProfileState extends State<UserProfile> {
                     ),
                   ),
                                   ),
-                                  SizedBox(height: 40),
+                                  SizedBox(height: 10),
                                   Padding(
                   padding: EdgeInsets.only(right: 20.0),
                   
                   child: Column(
                     children: [
                       Container(
-                        padding: EdgeInsets.symmetric(vertical:30),
-                        child: Text("Zainteresowania", style: TextStyle(fontSize: 20),)
+                        padding: EdgeInsets.symmetric(vertical:25),
+                        child: Text("Zainteresowania", style: TextStyle(fontSize: 18),)
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
