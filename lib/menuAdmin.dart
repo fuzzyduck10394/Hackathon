@@ -41,7 +41,7 @@ class _MenuAdminState extends State<MenuAdmin> {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: Padding(
-          padding: EdgeInsets.all(30.0),
+          padding: EdgeInsets.fromLTRB(5.0, 30.0, 5.0, 10.0),
           child: Column(
             children: [
               Row(
