@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'colors.dart';
+import 'menuUser.dart';
 
 class MenuAdmin extends StatefulWidget {
   const MenuAdmin({super.key});
@@ -22,9 +23,13 @@ class _MenuAdminState extends State<MenuAdmin> {
             ),
           ),
 
-          title: Text(
-            'Płock sercem - Admin',
-            style: TextStyle(color: Color.fromARGB(255, 255, 255, 255))
+          title: TextButton(
+            onPressed: () => Navigator.popAndPushNamed(context, '/choice'),
+            child: Text(
+              'Płock sercem - Admin',
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize:21)
+            ),
+
           ),
 
           backgroundColor: orange,
@@ -34,6 +39,8 @@ class _MenuAdminState extends State<MenuAdmin> {
 
           child: Column(
             children: [
+              SizedBox(height: 20,),
+              Event('Big Festivalowski', 'pomoz w epickiej akcji', '22.22', [category('zwierzeta')])
             ],           
 
           ),
