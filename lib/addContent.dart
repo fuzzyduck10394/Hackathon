@@ -44,12 +44,12 @@ class _AddContentState extends State<AddContent> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 70,),
+                SizedBox(height: 20,),
       
                 Text(
                   "Nazwa wydarzenia:",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 15,
                   )
                 ),
 
@@ -74,7 +74,7 @@ class _AddContentState extends State<AddContent> {
                 Text(
                   "Data wydarzenia:",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 15,
                   )
 
                 ),
@@ -101,7 +101,7 @@ class _AddContentState extends State<AddContent> {
                 Text(
                   "Ilość uczestników:",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 15,
                   )
                 ),
 
@@ -127,12 +127,13 @@ class _AddContentState extends State<AddContent> {
                     },
                   ),
                 ),
+                
                 SizedBox(height: 20,),
                 
                 Text(
                   "Opis:",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 15,
                   )
 
                 ),
@@ -152,12 +153,43 @@ class _AddContentState extends State<AddContent> {
                         },
                     ),
                 ),
+                SizedBox(height: 20,),
+                
+                Text(
+                  "Nr. KRS:",
+                  style: TextStyle(
+                    fontSize: 15,
+                  )
+                ),
+
+
+                SizedBox(height:12),
+
+                FormBuilder(
+                  child:  FormBuilderTextField(
+                    decoration: InputDecoration(
+                        
+                        border: OutlineInputBorder(),
+                        
+
+                    ),
+
+                    textAlign: TextAlign.left,
+
+                    // initialValue: ("0"),                  
+
+                    name: 'krss',
+                    onChanged: (val) {
+                      print(val); // Print the text value write into TextField
+                    },
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.only(top:60.0, bottom: 20),
                     child: Text(
                     "Wybierz kategorie:",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 15,
                       )
                     ),
                   ),
@@ -188,7 +220,7 @@ class _AddContentState extends State<AddContent> {
                         child: Text(
                           "Zaakceptuj", 
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 15,
                             color: Colors.white,
 
                           ),
@@ -209,3 +241,5 @@ class _AddContentState extends State<AddContent> {
     );
   }
 }
+
+
