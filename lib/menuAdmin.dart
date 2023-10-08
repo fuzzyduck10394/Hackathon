@@ -85,12 +85,12 @@ class _MenuAdminState extends State<MenuAdmin> {
                 children: [
                   Text('Twoje zgłoszenia:',
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 30,
                         fontWeight: FontWeight.bold,
                       ))
                 ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 25),
               Event(
                   'Big Festivalowski',
                   '  Jeśli chcesz stać się częścią nowo powstającego festiwalu, przeżyć przygodę, a przy okazji sporo się nauczyć, to zapraszamy Cię do Wolontariatu!  Wystarczy, że wypełnisz formularz zgłoszeniowy, a my się do Ciebie odezwiemy!',
