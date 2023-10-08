@@ -24,7 +24,7 @@ class _MenuAdminState extends State<MenuAdmin> {
 
           title: Text(
             'Płock sercem - Admin',
-            style: TextStyle(color: Colors.white)
+            style: TextStyle(color: Color.fromARGB(255, 255, 255, 255))
           ),
 
           backgroundColor: orange,
