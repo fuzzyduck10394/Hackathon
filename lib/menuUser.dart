@@ -85,6 +85,7 @@ class MenuUser extends StatelessWidget {
 
               SizedBox(height: 20,),
 
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -123,6 +124,7 @@ class MenuUser extends StatelessWidget {
                     ),
                   ),
                 ],
+
               ),
 
 
