@@ -17,8 +17,6 @@ void main() {
       '/user': (context) => UserProfile(),
       '/userMenu':(context) => MenuUser(),
     },
-  ));
-
-
-              
+  ));              
 }
+

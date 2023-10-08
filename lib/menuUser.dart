@@ -9,7 +9,6 @@ class MenuUser extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-  
         appBar: AppBar(
           centerTitle: true,
 
@@ -19,15 +18,32 @@ class MenuUser extends StatelessWidget {
             ),
           ),
 
-          title: Text(
-            'Płock sercem',
-            style: TextStyle(color: Colors.white)
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                child: Image.asset(
+                  'assets/images/logo3.png'
+                ),
+                width: 24,
+                height: 24,
+              ),
+              SizedBox(width: 10),
+              Text(
+                'Płock Sercem',
+                style: TextStyle(color: Colors.white)
+              ),
+            ],
+
           ),
+          
+          
 
           backgroundColor: orange,
         ),
 
-        body: Padding(
+        body: SingleChildScrollView(
+          child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
 
           child: Column(
@@ -36,13 +52,13 @@ class MenuUser extends StatelessWidget {
               //tekst 1
               Container(
                 alignment: Alignment.bottomLeft,
-                height: 80.0,
+                height: 100.0,
               
                 child: Text(
                   'Odkryj nowe wydarzenia',
               
                   style: TextStyle(
-                    fontSize: 30.0,
+                    fontSize: 34.0,
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                     // fontStyle: FontStyle.italic,
@@ -59,7 +75,7 @@ class MenuUser extends StatelessWidget {
                   'i pomagaj innym.',
               
                   style: TextStyle(
-                    fontSize: 14.0,
+                    fontSize: 20.0,
                     color: Colors.black,
                     // fontWeight: FontWeight.bold,
                     // fontStyle: FontStyle.italic,
@@ -69,32 +85,119 @@ class MenuUser extends StatelessWidget {
 
               SizedBox(height: 20,),
 
-              Container( // text field
-                height: 60,
-                
-                child: TextField(
-                  decoration: InputDecoration(
-                    // icon:
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container( // text field
+                    height: 60,
+                    width: 400,
                     
+                    child: TextField(
+                      decoration: InputDecoration(
+                        // icon:
+                        
+                        hintText: 'Szukaj...',
+                        border: OutlineInputBorder(),
+                      )
+                    ),
+                  ),
+
+
+                  Container(
+                    width: 60,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5.0),
+                      border: Border.all(
+                        color: gray,
+                        width: 1.5,
+                      ),
+                    ),
+                    child: IconButton(
+                      onPressed: () {
+                      },
                     
-                    hintText: 'Szukaj...',
-                    border: OutlineInputBorder(),
-                  )
-                ),
+                      icon: Icon (
+                        Icons.list,
+                      ),
+                    ),
+                  ),
+                ],
               ),
 
-              SizedBox(height: 30,),
 
-              Event('Tytul', 'Opis tutaj fiuwajiof ttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jestaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', [category('tak')]),
-              SizedBox(height: 20,),
-              Event('Tytul2', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', [category('tak'), category('nie')]),
+              SizedBox(height: 70,),
+
+              Column(children: [
+                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  SizedBox(height: 20,),
+                  Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
+                  SizedBox(height: 20,),
+                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  SizedBox(height: 20,),
+                  Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
+                  SizedBox(height: 20,),
+                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  SizedBox(height: 20,),
+                  Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
+                  SizedBox(height: 20,),
+                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  SizedBox(height: 20,),
+                  Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
+                  SizedBox(height: 20,),
+                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  SizedBox(height: 20,),
+                  Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
+                  SizedBox(height: 20,),
+                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  SizedBox(height: 20,),
+                  Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
+                  SizedBox(height: 20,),
+                ] 
+
+                )
+                             
+              
+              
             ],           
 
           ),
 
         ),
+        ),
 
-      
+      bottomNavigationBar: BottomNavigationBar(
+        
+        fixedColor: Colors.grey,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.favorite,
+              color: Colors.grey,
+            ),
+            label: 'Ulubione',
+            
+          ),
+
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+
+              color: Colors.grey,
+            ),
+            label: 'Strona główna'
+          ),
+
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.face, 
+
+              color: Colors.grey,
+            ),
+            label: 'Mój profil'
+          )
+        ],
+      )
     );
   }  
 }
@@ -107,18 +210,19 @@ class category extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(right:5),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5),
-        color: Colors.blue,
+        borderRadius: BorderRadius.circular(30),
+        color: light_blue,
       ),
 
-      padding: EdgeInsets.all(3.0),
+      padding: EdgeInsets.only(right: 7.0, left: 7.0, bottom: 2, top: 2),
 
       child: Text(
         arg,
         style: TextStyle(
           color: Colors.white,
-          fontWeight: FontWeight.bold,
+          // fontStyle: FontStyle.italic,
           fontSize: 12,
         )
       )
@@ -128,15 +232,29 @@ class category extends StatelessWidget {
 
 class Event extends StatelessWidget{
   final String title;
+  final String description;
   final String date;
   final List<Widget> categories;
 
-  Event(this.title, this.date, this.categories);
+  Event(this.title, this.description, this.date, this.categories);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: orange,
+      
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: Color.fromARGB(255, 250, 247, 247),
+        
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.12), // Kolor cienia
+            spreadRadius: 2, // Rozprzestrzenianie cienia
+            blurRadius: 2, // Rozmycie cienia
+            offset: Offset(0, 3), // Przesunięcie cienia w poziomie i pionie
+          ),
+        ],        
+      ),
       
       padding: EdgeInsets.all(15.0),
       
@@ -144,29 +262,70 @@ class Event extends StatelessWidget{
         crossAxisAlignment: CrossAxisAlignment.start,
 
         children: [
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            )
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                )
+              ),
+
+              Text (
+                date,
+                style: TextStyle(
+                  color: gray,
+                  //fontStyle: FontStyle.italic,
+                  fontSize: 12
+                ),
+              ),
+            ],
           ),
-          Text(
-            date,
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-              fontSize: 11,
-            )
+
+          Padding(
+            padding: const EdgeInsets.only(bottom: 25, top: 10),
+            child: Text(
+              description,
+              textAlign: TextAlign.justify,
+              style: TextStyle(
+                fontSize: 14,
+              )
+            ),
           ),
+
+
           Row(
             children:categories,
           ),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [    
+
+              Icon(
+                Icons.favorite_outline_outlined,
+                color: Colors.grey,
+              ),
+
+              SizedBox(width: 10),
+
+              Icon(
+                Icons.more_horiz_outlined,
+                color: Colors.grey,
+              ),
+
+
+            ],
+          )
         ],
       ),
 
+
       
     );
+    
   }
-
 }
 
