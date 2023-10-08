@@ -23,3 +23,5 @@ flutter:
     - family: Gabarito
       fonts:
         - asset: assets/fonts/Gabarito-Regular.ttf
+  assets:
+    - assets/images/

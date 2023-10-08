@@ -20,8 +20,6 @@ void main() {
       '/adminMenu': (context) => MenuAdmin(),
       '/addContentAdmin':(context) => AddContent(),
     },
-  ));
-
-
-              
+  ));              
 }
+
