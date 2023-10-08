@@ -31,12 +31,8 @@ class _MenuAdminState extends State<MenuAdmin> {
           ),
 
         ),
-
-          child: Column(
-            children: [
-              SizedBox(height: 20,),
-              AdminEvent('Big Festivalowski', 'pomoz w epickiej akcji', '22.22', [Admincategory('zwierzeta')])
-            ],           
+        backgroundColor: orange,
+                 
 
       ),
 
@@ -47,7 +43,7 @@ class _MenuAdminState extends State<MenuAdmin> {
         child: Column(
           children: [
             SizedBox(height: 20,),
-            Event('Big Festivalowski', 'pomoz w epickiej akcji', '22.22', [category('zwierzeta')])
+            AdminEvent('Big Festivalowski', 'pomoz w epickiej akcji', '22.22', [Admincategory('zwierzeta')])
           ],           
 
         ),
