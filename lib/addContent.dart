@@ -33,19 +33,29 @@ class _AddContentState extends State<AddContent> {
 
           backgroundColor: orange,
         ),
+
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(30.0),
             child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 150,),
-                Text("Nazwa eventu"),
+                SizedBox(height: 70,),
+      
+                Text(
+                  "Nazwa wydarzenia:",
+                  style: TextStyle(
+                    fontSize: 20,
+                  )
+                ),
+
+                SizedBox(height:12),
+
                 FormBuilder(
                     child:  FormBuilderTextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
+                        border: OutlineInputBorder(),
 
                       ),
                       textAlign: TextAlign.left,
@@ -58,11 +68,21 @@ class _AddContentState extends State<AddContent> {
                 
                 
                 SizedBox(height: 20,),
-                Text("Data eventu"),
+                Text(
+                  "Data wydarzenia:",
+                  style: TextStyle(
+                    fontSize: 20,
+                  )
+
+                ),
+
+
+                SizedBox(height:12),
                 FormBuilder(
                     child:  FormBuilderDateTimePicker(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
+                        
+                        border: OutlineInputBorder(),
 
                       ),
                       textAlign: TextAlign.left,
@@ -74,30 +94,54 @@ class _AddContentState extends State<AddContent> {
                 ),
           
                 SizedBox(height: 20,),
-                Text("Ilosc uczestnikow"),
-                FormBuilder(
-                    child:  FormBuilderTextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
+                
+                Text(
+                  "Ilość uczestników:",
+                  style: TextStyle(
+                    fontSize: 20,
+                  )
+                ),
 
-                      ),
-                      textAlign: TextAlign.left,
-                      initialValue: ("0"),                  
-                        name: 'ampeaople',
-                        onChanged: (val) {
-                            print(val); // Print the text value write into TextField
-                        },
+
+                SizedBox(height:12),
+
+                FormBuilder(
+                  child:  FormBuilderTextField(
+                    decoration: InputDecoration(
+                        
+                        border: OutlineInputBorder(),
+                        
+
                     ),
+
+                    textAlign: TextAlign.left,
+
+                    // initialValue: ("0"),                  
+
+                    name: 'ampeaople',
+                    onChanged: (val) {
+                      print(val); // Print the text value write into TextField
+                    },
+                  ),
                 ),
                 SizedBox(height: 20,),
-                Text("Opis"),
+                
+                Text(
+                  "Opis:",
+                  style: TextStyle(
+                    fontSize: 20,
+                  )
+
+                ),
+
+                SizedBox(height:12),
                 FormBuilder(
                     child:  FormBuilderTextField(
                       decoration: InputDecoration(
-                        border: InputBorder.none,
+                        border: OutlineInputBorder(),
 
                       ),
-                      
+                      // initialValue: ("Ok. 100 - 200 znaków"),            
                       textAlign: TextAlign.left,             
                         name: 'apd',
                         onChanged: (val) {
@@ -107,36 +151,52 @@ class _AddContentState extends State<AddContent> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top:60.0, bottom: 20),
-                  child: Text("Wybierz kategorie" ),
-                ),
-                SimpleGroupedChips<int>(
-                        controller: controller,
-                        values: [1,2,3,4,5],
-                        itemsTitle: ["Eventy" ,"Wsparcie","Cos","Place"],
-                        chipGroupStyle: ChipGroupStyle.minimize(
-                            selectedColorItem: Color.fromRGBO(243, 133, 94, 1),
-                            textColor: Colors.white,
-                             backgroundColorItem: orange,
-                             itemTitleStyle: TextStyle(
-                             fontSize: 14,
-                          ),
-                        ),
-                      ),
-                SizedBox(height: 50,),
-                Center(
-                  child: ElevatedButton(
-                    onPressed: () => (),
-                    child: Container(
-                      
-                      padding: EdgeInsets.all(20),
-                      child: Text("Zaakceptuj", style: TextStyle(fontSize:14),)
+                    child: Text(
+                    "Wybierz kategorie:",
+                      style: TextStyle(
+                        fontSize: 20,
+                      )
                     ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey,
-                    )
-                    
                   ),
-                )
+                  SimpleGroupedChips<int>(
+                    controller: controller,
+                    values: [1,2,3,4,5,6],
+                    itemsTitle: ["Zwierzęta" ,"Jedzenie","Impreza", "Sprzątanie", "Organizacja", "Dla niepełnoletnich", ],
+
+                    chipGroupStyle: ChipGroupStyle.minimize(
+                      selectedColorItem: lighter_blue,
+                      textColor: Colors.white,
+                      backgroundColorItem: light_blue,
+                      itemTitleStyle: TextStyle(
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+                
+                  SizedBox(height: 50,),
+
+                  Center(
+                    child: ElevatedButton(
+                      onPressed: () => (),
+                      child: Container(
+                        
+                        padding: EdgeInsets.all(20),
+
+                        child: Text(
+                          "Zaakceptuj", 
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+
+                          ),
+                        )
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: orange,
+                      )
+                      
+                    ),
+                  )
                          
               ],
                 

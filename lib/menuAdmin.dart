@@ -27,8 +27,9 @@ class _MenuAdminState extends State<MenuAdmin> {
             onPressed: () => Navigator.popAndPushNamed(context, '/choice'),
             child: Text(
               'Płock sercem - Admin',
-              style: TextStyle(color: Colors.white, fontSize:21)
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize:21)
             ),
+
           ),
 
           backgroundColor: orange,
