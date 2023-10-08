@@ -115,7 +115,7 @@ class MenuUser extends StatelessWidget {
                 Column(children: [
                   Event(
                       'Big Festivalowski',
-                      '  Jeśli chcesz stać się częścią nowo powstającego festiwalu, przeżyć przygodę, a przy okazji sporo się nauczyć, to zapraszamy Cię do Wolontariatu!  Wystarczy, że wypełnisz formularz zgłoszeniowy, a my się do Ciebie odezwiemy!',
+                      'Jeśli chcesz stać się częścią nowo powstającego festiwalu, przeżyć przygodę, a przy okazji sporo się nauczyć, to zapraszamy Cię do Wolontariatu!  Wystarczy, że wypełnisz formularz zgłoszeniowy, a my się do Ciebie odezwiemy!',
                       '18.08 - 20.08', [
                     category('festiwal'),
                     category('animator'),

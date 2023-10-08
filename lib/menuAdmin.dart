@@ -50,7 +50,7 @@ class _MenuAdminState extends State<MenuAdmin> {
                   Container(
                     // TextField
                     height: 60,
-                    width: 310,
+                    width: 290,
 
                     child: TextField(
                         decoration: InputDecoration(
