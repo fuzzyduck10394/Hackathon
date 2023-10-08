@@ -40,8 +40,6 @@ class MenuUser extends StatelessWidget {
 
           ),
           
-          
-
           backgroundColor: orange,
         ),
 
@@ -172,7 +170,7 @@ class MenuUser extends StatelessWidget {
         ),
 
       bottomNavigationBar: BottomNavigationBar(
-        onTap: (nr) => Navigator.pushNamed(context, "/user"),
+        onTap: (nr) => Navigator.popAndPushNamed(context, "/user"),
         fixedColor: Colors.grey,
         items: [
           BottomNavigationBarItem(

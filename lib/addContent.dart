@@ -15,9 +15,12 @@ class _AddContentState extends State<AddContent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        
+        backgroundColor: Color.fromARGB(255, 244, 241, 241),
         key: Key("addCOn"),
         appBar: AppBar(
+          leading: BackButton(
+            color: Colors.white,
+          ),
           centerTitle: true,
 
           shape: RoundedRectangleBorder(
