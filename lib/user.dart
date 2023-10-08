@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'colors.dart';
 
 class User {
   int ?age;
@@ -7,13 +7,16 @@ class User {
   // pitu pitI
 
 }
+
 Widget generateInterest(String conn, Color color) {
   return Container(
     padding: EdgeInsets.fromLTRB(25,13,25,13),
     margin: EdgeInsets.only(left: 4),
+
     decoration: BoxDecoration(
       color: color,
       borderRadius: BorderRadius.circular(40),
+      border: Border.all(color: Colors.grey, width: 0.9)
     ),
     child: Text(conn, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
   );
@@ -22,26 +25,37 @@ Widget generateInterest(String conn, Color color) {
 
 Widget renderInfo(String category, String value) {
   return Container(
-    padding: EdgeInsets.only(top:10, bottom: 10),
-    child: Row(
-      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Padding(
-          padding: EdgeInsets.only(left : 30.0),
-          child: Text(category, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
-        ),
-        SizedBox(width: 10),
-        Padding(
-          padding: EdgeInsets.only(right : 30.0),
-          child: Text(value, style: TextStyle(fontSize: 20), textAlign: TextAlign.start),
-        ),
-        
-        
-      ],
+    // padding: EdgeInsets.only(top:10, bottom: 10),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       
-    ),
-  );
-  
+      children: [
+        Text(
+          category,
+          style: TextStyle(
+            fontSize: 13,
+            color: Colors.grey,
+          ),
+        ),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              value,
+              style: TextStyle(
+                fontSize: 20
+              ),
+            ),
+
+            Icon(Icons.arrow_right)
+          ],
+        ),
+
+        SizedBox(height: 10),
+      ]
+    )
+  ); 
 }
 
 class UserProfile extends StatefulWidget {
@@ -55,109 +69,202 @@ class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.grey,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Container(
-              alignment: Alignment.topLeft,
-              child:Container(
-                  margin: EdgeInsets.only(bottom:10),
-                  child: TextButton(
-                  onPressed: () => (Navigator.pop(context)),
-                  child: Icon(Icons.arrow_back, color: Colors.white, size:30),
-                  ),
-                ),
+
+      appBar: AppBar(
+
+          centerTitle: true,
+          leading: BackButton(
+            color: Colors.white,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(10),
             ),
-            
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                     SizedBox(height: 13,),
-                      Container(           
-                        decoration: BoxDecoration(
-                          color:Colors.white,
-                          border: Border.all(width: 4, color:Colors.white),
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(blurRadius: 10, color: Color.fromARGB(255, 90, 89, 89))
-                          ]
-                        ),
-                        child: Column(
-                          children: [
-                            SizedBox(height: 20,),
-                            Container(
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                    blurRadius: 5,
-                                    color: const Color.fromARGB(255, 90, 89, 89),
-                                    offset: Offset(0,4),
-                                  ),
-                                ]
-                              ),
-                          
-                              //padding: EdgeInsets.only(top:130, bottom: 30),
-                              child: CircleAvatar(
-                                radius: 70,
-                                backgroundColor: Colors.white,
-                                foregroundColor: Colors.grey,
-                                child: Icon(Icons.person, size:70),
-                                          
-                            ),
-                        
-                      ), 
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10,40,10,40),
-                        child: Text(
-                          "Adam Kowalski",
-                          style: TextStyle(
-                            fontSize: 35,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
+          ),
+
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                child: Image.asset(
+                  'assets/images/logo3.png'
+                ),
+                width: 24,
+                height: 24,
+              ),
+              SizedBox(width: 10),
+              TextButton(
+                onPressed: () => Navigator.popAndPushNamed(context, '/choice'),
+                child: Text(
+                  'Płock Sercem',
+                  style: TextStyle(color: Colors.white, fontSize:21)
+                ),
+              ),
+            ],
+
+          ),
+          
+          backgroundColor: orange,
+        ),
+      
+
+      body: Padding(
+        padding: const EdgeInsets.all(40.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          
+          children: [
+                 // SizedBox(height: 2,),
+                  Column(
+                    children: [
                       SizedBox(height: 20,),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          renderInfo("Dat.urodzenia", "21.12.1999"),
-                          renderInfo("Nr tel", "+48 123 456 678"),
-                          renderInfo("Email", "a1damkowalski@gmail.com"),
-                        ],
-                      ),
-                      SizedBox(height: 90),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal : 26.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            generateInterest("Organizacja", Colors.orange),
-                            generateInterest("Eventy", Colors.orange),
-                            generateInterest("Zbiórki", Colors.orange),
+                      Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 5,
+                              color: const Color.fromARGB(255, 90, 89, 89),
+                              offset: Offset(0,4),
+                            ),
                           ]
                         ),
+                    
+                        //padding: EdgeInsets.only(top:130, bottom: 30),
+                        child: CircleAvatar(
+                          radius: 70,
+                          backgroundColor: Colors.white,
+                          foregroundColor: Colors.grey,
+                          child: Icon(Icons.person, size:70),
+                                    
                       ),
-                      
-                      SizedBox(height: 200,)
+                  
+                                  ), 
+                        
+                                  Padding(
+                  padding: const EdgeInsets.fromLTRB(10,20,10,40),
+                  child: Column(
+                    children: [
+                      Text(
+                        "Adam Kowalski",
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        "Wolontariusz",
+                        style: TextStyle(
+                          fontSize: 18,
+                        ),
+                      ),
                     ],
                   ),
-                ),
-                
-                
-              ],
-      
-            ),
+                                  ),
+                        
+                                  SizedBox(height: 10,),
+                        
+                                  Container(
+                  width: 1000,
+                        
+                  child: Container(
+                    padding: EdgeInsets.all(20.0),
+                    decoration: BoxDecoration (
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.12), // Kolor cienia
+                          spreadRadius: 2, // Rozprzestrzenianie cienia
+                          blurRadius: 2, // Rozmycie cienia
+                          offset: Offset(0, 3), // Przesunięcie cienia w poziomie i pionie
+                        ),
+                      ]
+                    ),
+
+                    child: Column(
+                      
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        renderInfo("Data urodzenia:", "21.12.1999"),
+                        renderInfo("Numer telefonu:", "+48 123 456 678"),
+                        renderInfo("Email:", "a1damkowalski@gmail.com"),
+                        renderInfo("Miejsce zamieszkania:", "ul. Kwiatka 8"),
+                        renderInfo("Poziom zaufania:", "66% z 3"),
+                        
+                      ],
+                    ),
+                  ),
+                                  ),
+                                  SizedBox(height: 40),
+                                  Padding(
+                  padding: EdgeInsets.only(right: 20.0),
+                  
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical:30),
+                        child: Text("Zainteresowania", style: TextStyle(fontSize: 20),)
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          generateInterest("Organizacja", Colors.orange),
+                          generateInterest("Eventy", Colors.orange),
+                          generateInterest("Zbiórki", Colors.orange),
+
+                          Container(
+                           // padding: EdgeInsets.fromLTRB(20,10,20,10),
+                            margin: EdgeInsets.only(left: 20),
+                            child: Icon(Icons.add),
+                          ),
+                        ]
+                      ),
+                    ],
+                  ),
+                                  ),
+                                  
+                                  // SizedBox(height: 240,)
+                                ],
+                              ),
             
-      
-      
             
           ],
+              
         ),
       ),
+    bottomNavigationBar: BottomNavigationBar(
+        onTap: (nr) => Navigator.popAndPushNamed(context, "/userMenu"),
+        fixedColor: Colors.grey,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.favorite,
+              color: Colors.grey,
+            ),
+            label: 'Ulubione',
+            
+          ),
 
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+
+              color: Colors.grey,
+            ),
+            label: 'Strona główna'
+          ),
+
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.face, 
+
+              color: Colors.grey,
+            ),
+            label: 'Mój profil'
+          )
+        ],
+      )
     );
   }
 }

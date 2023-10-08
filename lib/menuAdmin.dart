@@ -13,28 +13,24 @@ class _MenuAdminState extends State<MenuAdmin> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: new Key("menuAdm"),
+      
       appBar: AppBar(
-          centerTitle: true,
+        centerTitle: true,
 
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(10),
-            ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(10),
           ),
-
-          title: TextButton(
-            onPressed: () => Navigator.popAndPushNamed(context, '/choice'),
-            child: Text(
-              'Płock sercem - Admin',
-              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize:21)
-            ),
-
-          ),
-
-          backgroundColor: orange,
         ),
-      body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
+
+        title: TextButton(
+          onPressed: () => Navigator.popAndPushNamed(context, '/choice'),
+          child: Text(
+            'Płock sercem - Admin',
+            style: TextStyle(color: Color.fromARGB(255, 255, 255, 255), fontSize:21)
+          ),
+
+        ),
 
           child: Column(
             children: [
@@ -42,18 +38,31 @@ class _MenuAdminState extends State<MenuAdmin> {
               AdminEvent('Big Festivalowski', 'pomoz w epickiej akcji', '22.22', [Admincategory('zwierzeta')])
             ],           
 
-          ),
+      ),
+
+
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+
+        child: Column(
+          children: [
+            SizedBox(height: 20,),
+            Event('Big Festivalowski', 'pomoz w epickiej akcji', '22.22', [category('zwierzeta')])
+          ],           
 
         ),
-        floatingActionButton: SizedBox(
-          width: 90,
-          height: 90,
-          child: FloatingActionButton(
-            onPressed: () => Navigator.pushNamed(context,'/addContentAdmin'),
-            backgroundColor: orange,
-            child: Icon(Icons.add, size:40, color: Colors.white),
-          ),
+
+      ),
+
+      floatingActionButton: SizedBox(
+        width: 90,
+        height: 90,
+        child: FloatingActionButton(
+          onPressed: () => Navigator.pushNamed(context,'/addContentAdmin'),
+          backgroundColor: orange,
+          child: Icon(Icons.add, size:40, color: Colors.white),
         ),
+      ),
 
     );
   }
