@@ -29,9 +29,12 @@ class MenuUser extends StatelessWidget {
                 height: 24,
               ),
               SizedBox(width: 10),
-              Text(
-                'Płock Sercem',
-                style: TextStyle(color: Colors.white)
+              TextButton(
+                onPressed: () => Navigator.popAndPushNamed(context, '/choice'),
+                child: Text(
+                  'Płock Sercem',
+                  style: TextStyle(color: Colors.white, fontSize:21)
+                ),
               ),
             ],
 
@@ -131,27 +134,27 @@ class MenuUser extends StatelessWidget {
               SizedBox(height: 70,),
 
               Column(children: [
-                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  Event('Big Festivalowski','Opis','21.09',[category('zwierzeta')]),
                   SizedBox(height: 20,),
                   Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
                   SizedBox(height: 20,),
-                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  Event('Big Festivalowski','Opis','21.09',[category('zwierzeta')]),
                   SizedBox(height: 20,),
                   Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
                   SizedBox(height: 20,),
-                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  Event('Big Festivalowski','Opis','21.09',[category('zwierzeta')]),
                   SizedBox(height: 20,),
                   Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
                   SizedBox(height: 20,),
-                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  Event('Big Festivalowski','Opis','21.09',[category('zwierzeta')]),
                   SizedBox(height: 20,),
                   Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
                   SizedBox(height: 20,),
-                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  Event('Big Festivalowski','Opis','21.09',[category('zwierzeta')]),
                   SizedBox(height: 20,),
                   Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
                   SizedBox(height: 20,),
-                  Event('Big Festivalowski','Opis','2109',[category('zwierzeta')]),
+                  Event('Big Festivalowski','Opis','21.09',[category('zwierzeta')]),
                   SizedBox(height: 20,),
                   Event('Akcja "Pomóż seniorowi"', 'Opis2taki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jesttaki ifhaijoaw opis jest taki opis jest sjfasfk taki opis jest', '22.06', [category('gotowanie'), category('kategoria')]),
                   SizedBox(height: 20,),
