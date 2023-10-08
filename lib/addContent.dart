@@ -114,7 +114,7 @@ class _AddContentState extends State<AddContent> {
                         values: [1,2,3,4,5],
                         itemsTitle: ["Eventy" ,"Wsparcie","Cos","Place"],
                         chipGroupStyle: ChipGroupStyle.minimize(
-                            selectedColorItem: Colors.grey,
+                            selectedColorItem: Color.fromRGBO(243, 133, 94, 1),
                             textColor: Colors.white,
                              backgroundColorItem: orange,
                              itemTitleStyle: TextStyle(

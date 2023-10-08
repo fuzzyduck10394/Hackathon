@@ -169,7 +169,7 @@ class MenuUser extends StatelessWidget {
         ),
 
       bottomNavigationBar: BottomNavigationBar(
-        
+        onTap: (nr) => Navigator.pushNamed(context, "/user"),
         fixedColor: Colors.grey,
         items: [
           BottomNavigationBarItem(

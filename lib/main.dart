@@ -13,7 +13,7 @@ void main() {
     ),
 
 
-    initialRoute: '/adminMenu',
+    initialRoute: '/userMenu',
     routes: {
       '/user': (context) => UserProfile(),
       '/userMenu':(context) => MenuUser(),
