@@ -1,12 +1,14 @@
 name: aplikacja1test
 description: A new Flutter project.
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.0.3 <4.0.0'
+  sdk: ">=3.0.3 <4.0.0"
 
 dependencies:
+  flutter_form_builder: ^9.1.1
+  checkbox_grouped: ^2.0.0
   flutter:
     sdk: flutter
 

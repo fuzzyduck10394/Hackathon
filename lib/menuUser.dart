@@ -75,9 +75,8 @@ class MenuUser extends StatelessWidget {
                 child: TextField(
                   decoration: InputDecoration(
                     // icon:
-                    
-                    
                     hintText: 'Szukaj...',
+                    suffixIcon:Icon(Icons.filter_list_alt),
                     border: OutlineInputBorder(),
                   )
                 ),
