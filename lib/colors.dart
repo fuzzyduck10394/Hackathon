@@ -7,4 +7,4 @@ Color orange = Color.fromRGBO(241, 90, 36, 1);
 Color black = Color.fromRGBO(24, 18, 18, 1);
 Color light_blue = Color.fromRGBO(3, 113, 113, 1);
 Color lighter_blue = Color.fromRGBO(48, 158, 158, 1);
-Color gray  = Color.fromRGBO(165, 177, 177, 1);
+Color gray = Color.fromRGBO(165, 177, 177, 1);
